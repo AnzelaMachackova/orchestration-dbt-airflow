@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: spark-project-777               
+    schema: platform_data               
+    tables:
+      - name: raw_netflix_data            
+        description: "Source table for Netflix data"
+        columns:
+          - name: title
+            description: "Title of the movie or series"
+          - name: type
+            description: "Type of content (e.g., movie, series)"
+          - name: genres
+            description: "Genres associated with the content"
+          - name: releaseYear
+            description: "Year the content was released"
+          - name: imdbId
+            description: "IMDB ID of the content"
+          - name: imdbAverageRating
+            description: "Average IMDB rating of the content"
+          - name: imdbNumVotes
+            description: "Number of votes for the content on IMDB"
+          - name: availableCountries
+            description: "Countries where the content is available"
+
+

@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: netflix_data
+    description: "Enriched Netflix data table joined with rating descriptions"
+    columns:
+      - name: title
+        description: "Title of the movie or series"
+      - name: type
+        description: "Type of content (e.g., movie, series)"
+      - name: genres
+        description: "Genres associated with the content"
+      - name: release_year
+        description: "Year the content was released"
+      - name: imdb_id
+        description: "IMDB ID of the content"
+      - name: imdb_average_rating
+        description: "Average IMDB rating of the content"
+        data_tests:
+          - dbt_utils.accepted_range:
+              min_value: 1
+              max_value: 10
+      - name: imdb_num_votes
+        description: "Number of votes for the content on IMDB"
+      - name: available_countries
+        description: "Countries where the content is available"
+      - name: rating_description
+        description: "Description of the rounded IMDB rating"

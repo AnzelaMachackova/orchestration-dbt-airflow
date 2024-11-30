@@ -1,0 +1,4 @@
+logs
+dbt/dbt_packages
+dbt/target
+.user.yml
